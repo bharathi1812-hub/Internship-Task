@@ -19,7 +19,6 @@ SELECT c.CustomerName, o.OrderID FROM Customers c LEFT JOIN Orders o ON c.Custom
 UNION
 SELECT c.CustomerName, o.OrderID FROM Customers c RIGHT JOIN Orders o ON c.CustomerID = o.CustomerID;
 INSERT INTO Orders (OrderID, CustomerID) VALUES (104, 1);
-INSERT INTO Orders (OrderID, CustomerID) VALUES (104, 1);
 
 SELECT c.CustomerName, COUNT(o.OrderID) AS TotalOrders FROM Customers c
 LEFT JOIN Orders o ON c.CustomerID = o.CustomerID GROUP BY c.CustomerName;
